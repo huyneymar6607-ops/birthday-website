@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7e8">
+  <meta name="description" content="A birthday adventure made just for you.">
+  <title>A Birthday Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#home">Skip to the birthday surprise</a>
+  <canvas class="effects-canvas" aria-hidden="true"></canvas>
+  <main>
+    <section class="scene hero is-active" id="home" aria-labelledby="hero-title">
+      <div class="hero-wash" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A LITTLE SURPRISE FOR YOU <span class="eyebrow-line"></span></p>
+        <h1 id="hero-title"><span>HAPPY</span><span class="title-accent">BIRTHDAY<span class="title-bang">!</span></span></h1>
+        <p class="hero-subtitle">This is just for you.</p>
+        <button class="button button-primary" id="start-button" type="button">
+          <span>START THE ADVENTURE</span><span class="button-arrow" aria-hidden="true">&#8594;</span>
+        </button>
+      </div>
+      <div class="hero-footer" aria-hidden="true"><span></span><span>01 / 03</span></div>
+      <span class="hero-star star-one" aria-hidden="true">&#10022;</span>
+      <span class="hero-star star-two" aria-hidden="true">&#10022;</span>
+      <span class="hero-star star-three" aria-hidden="true">&#10022;</span>
+    </section>
+
+    <section class="scene game-scene" id="game" aria-labelledby="game-title" hidden>
+      <div class="scene-topline"><span class="section-kicker">THE FIRST CHALLENGE</span><span class="scene-count">02 / 03</span></div>
+      <div class="game-heading">
+        <p class="eyebrow"><span class="eyebrow-line"></span> MAKE A WISH <span class="eyebrow-line"></span></p>
+        <h2 id="game-title">Catch the <span>stars.</span></h2>
+        <p class="game-instructions">Click the falling stars to collect them.</p>
+      </div>
+      <div class="game-meta" aria-live="polite">
+        <span class="score-label">STARS COLLECTED</span>
+        <span class="score-value"><span id="score">0</span><span class="score-divider">/</span>10</span>
+      </div>
+      <div class="game-arena" id="game-arena" aria-label="Star catching game area">
+        <div class="arena-horizon" aria-hidden="true"></div>
+        <p class="arena-hint" id="arena-hint">Ready when you are <span aria-hidden="true">&#8595;</span></p>
+        <div class="game-overlay" id="game-overlay" hidden>
+          <p class="eyebrow"><span class="eyebrow-line"></span> MISSION COMPLETE <span class="eyebrow-line"></span></p>
+          <h3>YOU DID IT!</h3>
+          <p>Ten stars, all yours.</p>
+          <a class="button cake-link-button" href="cake.html"><span>BUILD THE CAKE</span><span class="button-arrow" aria-hidden="true">&#8594;</span></a>
+          <button class="button button-primary" id="continue-button" type="button"><span>CONTINUE</span><span class="button-arrow" aria-hidden="true">&#8594;</span></button>
+        </div>
+      </div>
+      <div class="game-bottomline" aria-hidden="true"><span>COLLECT 10 TO CONTINUE</span><span>GOOD LUCK</span></div>
+    </section>
+
+    <section class="scene letter-scene" id="letter" aria-labelledby="letter-heading" hidden>
+      <div class="scene-topline"><span class="section-kicker">THE LAST LITTLE SURPRISE</span><span class="scene-count">03 / 03</span></div>
+      <div class="letter-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> JUST FOR YOU <span class="eyebrow-line"></span></p>
+        <h2 id="letter-heading">One last thing<span class="title-bang">...</span></h2>
+        <p class="letter-hint" id="letter-hint">Click to open</p>
+        <div class="envelope-stage">
+          <span class="letter-paper" id="birthday-letter" hidden>
+            <span class="paper-rule" aria-hidden="true"></span>
+            <span class="letter-copy">
+              <span>Happy Birthday 🐟!</span>
+              <span>Thêm một tuổi mới rồi nha, chúc ấy lúc nào cũng khoẻ mạnh, vui vẻ, bình an, làm được những thứ ấy muốn làm và bớt suy nghĩ nhiều lại xíu =)))</span>
+              <span>Tui cũng muốn cảm ơn ấy vì khoảng thời gian vừa qua. Tui vẫn nhớ những gì ấy từng nói với tui, với cả cái thư dài thiệt dài ấy viết cho tui nữa 😭. Đọc xong lúc đó tui không biết phải trả lời sao cho đúng nên chắc giờ mới là lúc tui trả nợ nè.  </span>
+              <span>Thiệt ra tui cũng rất quý ấy. Tui vui vì trong một khoảng thời gian của cuộc đời tui có một người quan tâm và đối xử với tui chân thành như vậy. Có thể tui không phải lúc nào cũng nói ra, với nhiều lúc tui cũng hơi khờ trong mấy chuyện này =))), nhưng những gì ấy làm cho tui, tui đều nhớ hết á.  </span>
+                <span>Tui chỉ mong tuổi mới sẽ đối xử với cá thật dịu dàng. Mong cá gặp được nhiều người tốt, có thật nhiều kỷ niệm vui, làm được những thứ ấy đang theo đuổi và quan trọng nhất là vẫn cứ là chính mình thoi.</span>
+              <span class="letter-signoff"> 🥕 </span>
+            </span>
+          </span>
+          <button class="envelope" id="envelope" type="button" aria-label="Open your birthday letter" aria-expanded="false" aria-controls="birthday-letter">
+            <span class="envelope-shadow" aria-hidden="true"></span>
+            <span class="envelope-back" aria-hidden="true"></span>
+            <span class="envelope-flap" aria-hidden="true"></span>
+            <span class="envelope-front" aria-hidden="true"></span>
+            <span class="envelope-seal" aria-hidden="true">&#10022;</span>
+          </button>
+        </div>
+        <p class="letter-footer">
+    
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

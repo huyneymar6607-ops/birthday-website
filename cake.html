@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7e8">
+  <meta name="description" content="Build a birthday cake with colorful toppings and decorations.">
+  <title>Build the Birthday Cake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cake.css">
+  <script src="cake.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#cake-game">Skip to cake builder</a>
+  <div class="paper-scraps" aria-hidden="true"></div>
+  <div class="celebration-layer" id="celebration-layer" aria-hidden="true"></div>
+
+  <header class="page-header">
+    <div class="topline">
+      <a class="back-link" href="index.html"><span aria-hidden="true">&#8592;</span> BACK TO THE ADVENTURE</a>
+      <span class="page-count">02 / 03</span>
+    </div>
+    <div class="heading-block">
+      <p class="eyebrow"><span class="eyebrow-doodle" aria-hidden="true">&#10022;</span> THE NEXT LITTLE CHALLENGE <span class="eyebrow-doodle" aria-hidden="true">&#10022;</span></p>
+      <h1>BUILD THE BIRTHDAY CAKE</h1>
+      <p class="subheading">Make the perfect cake before we continue.</p>
+    </div>
+  </header>
+
+  <main class="game-shell" id="cake-game">
+    <section class="builder" aria-label="Birthday cake builder">
+      <div class="game-status">
+        <div class="score-copy">
+          <span class="score-label">YOUR DECORATIONS</span>
+          <span class="score-value" aria-live="polite">Decorations: <span id="decoration-count">0</span></span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Cake decoration progress" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0" id="progress-track"><span id="progress-fill"></span></div>
+      </div>
+
+      <div class="cake-stage" id="cake-stage">
+        <span class="stage-note note-left" aria-hidden="true">made with<br>extra frosting</span>
+        <span class="stage-note note-right" aria-hidden="true">a very good<br>cake plan</span>
+        <span class="stage-sparkle sparkle-left" aria-hidden="true">&#10022;</span>
+        <span class="stage-sparkle sparkle-right" aria-hidden="true">&#10022;</span>
+        <div class="cake-shadow" aria-hidden="true"></div>
+        <div class="serving-plate" aria-hidden="true"></div>
+        <div class="cake-display" role="img" aria-label="A plain birthday cake ready for decorations">
+          <div class="cake-body" aria-hidden="true"></div>
+          <div class="cake-side-frosting" aria-hidden="true"></div>
+          <div class="cake-top" aria-hidden="true"></div>
+        </div>
+        <div class="cake-dropzone" id="cake-dropzone" role="button" tabindex="0" aria-label="Cake. Drop a decoration here or press Enter to place the selected topping.">
+          <div class="cake-pieces" id="cake-pieces" aria-hidden="true"></div>
+          <div class="cake-front-glaze" aria-hidden="true"></div>
+        </div>
+        <p class="drop-hint" id="drop-hint">Pick a topping, then drag it onto the cake.</p>
+      </div>
+
+      <div class="tray-heading">
+        <div><p class="tray-kicker">THE TOPPING BAR</p><p class="tray-instruction" id="tray-instruction">Drag, drop, and decorate to your heart's content.</p></div>
+        <span class="tray-count">10 LITTLE EXTRAS</span>
+      </div>
+      <div class="topping-tray" id="topping-tray" aria-label="Available cake decorations">
+        <button class="topping" type="button" data-kind="strawberry" aria-label="Strawberry"><span class="topping-glyph" aria-hidden="true"></span><span>Strawberry</span></button>
+        <button class="topping" type="button" data-kind="blueberry" aria-label="Blueberry"><span class="topping-glyph" aria-hidden="true"></span><span>Blueberry</span></button>
+        <button class="topping" type="button" data-kind="cherry" aria-label="Cherries"><span class="topping-glyph" aria-hidden="true"></span><span>Cherries</span></button>
+        <button class="topping" type="button" data-kind="candle" aria-label="Candle"><span class="topping-glyph" aria-hidden="true"></span><span>Candle</span></button>
+        <button class="topping" type="button" data-kind="sprinkles" aria-label="Sprinkles"><span class="topping-glyph" aria-hidden="true"></span><span>Sprinkles</span></button>
+        <button class="topping" type="button" data-kind="chocolate" aria-label="Chocolate"><span class="topping-glyph" aria-hidden="true"></span><span>Chocolate</span></button>
+        <button class="topping" type="button" data-kind="cookie" aria-label="Cookie"><span class="topping-glyph" aria-hidden="true"></span><span>Cookie</span></button>
+        <button class="topping" type="button" data-kind="star" aria-label="Star"><span class="topping-glyph" aria-hidden="true"></span><span>Star</span></button>
+        <button class="topping" type="button" data-kind="frosting" aria-label="Frosting rosette"><span class="topping-glyph" aria-hidden="true"></span><span>Rosette</span></button>
+        <button class="topping topper-item" type="button" data-kind="topper" aria-label="Birthday topper"><span class="topping-glyph" aria-hidden="true"></span><span>Topper</span></button>
+      </div>
+
+      <div class="game-controls">
+        <button class="control-button reset-button" id="reset-button" type="button"><span aria-hidden="true">&#8635;</span> RESET CAKE</button>
+      </div>
+
+      <section class="completion-panel" id="completion-panel" aria-live="polite" hidden>
+        <p class="completion-kicker"><span aria-hidden="true">&#10022;</span> YOU DID IT <span aria-hidden="true">&#10022;</span></p>
+        <h2>MASTERPIECE COMPLETE!</h2>
+       
+        <a class="continue-button" href="index.html#letter">CONTINUE <span aria-hidden="true">&#8594;</span></a>
+      </section>
+    </section>
+  </main>
+  <p class="page-footer"></p>
+</body>
+</html>
